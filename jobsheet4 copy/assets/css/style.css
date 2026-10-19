@@ -1,0 +1,6 @@
+/* Override kecil di atas Bootstrap agar tetap konsisten dengan warna brand SIMPUS-Mini */
+
+.nav-link:hover,
+.nav-link.active {
+    color: #d9e8f5 !important;
+}
