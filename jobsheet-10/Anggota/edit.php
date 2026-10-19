@@ -48,6 +48,13 @@ if (!$anggota) {
                     <input type="text" id="no_hp" name="no_hp" value="<?php echo $anggota['no_hp']; ?>">
                 </p>
                 <p>
+                    <label for="jenis_kelamin">Jenis Kelamin</label><br>
+                    <select id="jenis_kelamin" name="jenis_kelamin">
+                        <option value="L" <?php echo $anggota['jenis_kelamin'] === 'L' ? 'selected' : ''; ?>>Laki-laki</option>
+                        <option value="P" <?php echo $anggota['jenis_kelamin'] === 'P' ? 'selected' : ''; ?>>Perempuan</option>
+                    </select>
+                </p>
+                <p>
                     <button type="submit">Update</button>
                 </p>
             </form>

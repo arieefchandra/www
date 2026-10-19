@@ -54,13 +54,14 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                         <th>Nama</th>
                         <th>Alamat</th>
                         <th>No. HP</th>
+                        <th>Jenis Kelamin</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php if (empty($daftarAnggota)): ?>
                     <tr>
-                        <td colspan="5">Tidak ada data anggota yang cocok</td>
+                        <td colspan="6">Tidak ada data anggota yang cocok</td>
                     </tr>
                     <?php else: ?>
                         <?php foreach ($daftarAnggota as $anggota): ?>
@@ -69,6 +70,7 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                             <td><?php echo $anggota['nama']; ?></td>
                             <td><?php echo $anggota['alamat']; ?></td>
                             <td><?php echo $anggota['no_hp']; ?></td>
+                            <td><?php echo $anggota['jenis_kelamin'] ?></td>
                             <td>
                                 <a href="edit.php?id=<?php echo $anggota['id']; ?>" class="btn-edit">Edit</a>
                                 <form class="form-hapus" method="post" action="hapus.php">
