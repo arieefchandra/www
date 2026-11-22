@@ -7,20 +7,39 @@
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    color: #1d5b8a; 
-    background-color: #9cbdff;
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #0f3057,
+        #20639b,
+        #5dade2
+    );
+
+    background-attachment: fixed;
     line-height: 1.5;
+    min-height: 100vh;
 }
 
-/* ===== Header & Navbar (Flexbox) ===== */
+/* ===== Liquid Glass Navbar ===== */
+
 header {
-    background-color: #1d5b8a;
+    background: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
     color: #fff;
     padding: 1rem 1.5rem;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 header h1 {
@@ -30,38 +49,43 @@ header h1 {
 header nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 1.25rem;
 }
 
 header nav a {
     color: #fff;
-    font-weight: 500;
-}
-
-a {
-    color: #1d5b8a;
+    font-weight: 600;
     text-decoration: none;
+
+    padding: 10px 14px;
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
 }
 
-a:hover {
+/* Efek ketika mouse diarahkan */
+
+header nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
     text-decoration: none;
-    padding: 8px;     
-    border-radius: 5px;
-    background-color: #9bb6ff; 
-    
+    padding: 10px 14px;
 }
 
-.auth-status {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: #fff;
-}
+/* Menu halaman aktif */
 
-.auth-status a {
-    color: #fff;
-    text-decoration: none;
-    padding: 8px; 
+header nav a.active {
+    background: rgba(255, 255, 255, 0.3);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
 
